@@ -789,7 +789,7 @@ img, video, iframe, embed, object {
 }
 /* --Portfolio----- */
 #work {
-	background: #27AFD3;
+	background: rgba(0, 120, 186, 0.65);
 	color: #fff;
 }
 #work h2 {
