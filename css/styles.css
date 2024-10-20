@@ -100,6 +100,9 @@ line-height: 41px;
 #services img{
 	width:100%;
 }
+#services h2{
+	color:white;
+}
 #services .circle{
 width:120px;
 height: 115px;
