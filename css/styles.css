@@ -1210,3 +1210,12 @@ background: rgba(0, 120, 186, 0.65);
 #groups .special-link{
 	color: #bfec70;
 }
+#content h3{
+	color: rgba(0, 120, 186, 0.8);
+}
+#content h2{
+	color: rgba(0, 120, 186, 2);
+}
+#content li::marker {
+	color: rgba(0, 120, 186, 1);
+  }
