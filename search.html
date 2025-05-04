@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rare Disease Search</title>
+</head>
+<body>
+  <h1>Rare Disease Search</h1>
+
+  <label for="meds">Enter medications (comma-separated):</label><br>
+  <input type="text" id="meds" placeholder="e.g., med1, med2, aspirin"><br><br>
+
+  <button onclick="searchDiseases()">Search</button>
+
+  <h2>Matching Diseases:</h2>
+  <ul id="results"></ul>
+
+  <script>
+    async function searchDiseases() {
+      const medsInput
+      const medications = medsInput.split(',').map(med => med.trim());
+
+      const response = await fetch('http://localhost:3000/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ medications })
+      });
+
+      const data = await response.json();
+      console.log(data)
+      const resultsList = document.getElementById('results');
+      resultsList.innerHTML = '';
+
+      if (data.diseases.length === 0) {
+        resultsList.innerHTML = '<li>No matching diseases found.</li>';
+      } else {
+        data.diseases.forEach(disease => {
+          const li = document.createElement('li');
+          li.textContent = disease;
+          resultsList.appendChild(li);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
