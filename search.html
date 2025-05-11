@@ -1,47 +1,92 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-gb">
 <head>
-  <meta charset="UTF-8">
-  <title>Rare Disease Search</title>
-</head>
-<body>
-  <h1>Rare Disease Search</h1>
-
-  <label for="meds">Enter medications (comma-separated):</label><br>
-  <input type="text" id="meds" placeholder="e.g., med1, med2, aspirin"><br><br>
-
-  <button onclick="searchDiseases()">Search</button>
-
-  <h2>Matching Diseases:</h2>
-  <ul id="results"></ul>
-
-  <script>
-    async function searchDiseases() {
-      const medsInput
-      const medications = medsInput.split(',').map(med => med.trim());
-
-      const response = await fetch('http://localhost:3000/search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ medications })
-      });
-
-      const data = await response.json();
-      console.log(data)
-      const resultsList = document.getElementById('results');
-      resultsList.innerHTML = '';
-
-      if (data.diseases.length === 0) {
-        resultsList.innerHTML = '<li>No matching diseases found.</li>';
-      } else {
-        data.diseases.forEach(disease => {
-          const li = document.createElement('li');
-          li.textContent = disease;
-          resultsList.appendChild(li);
-        });
-      }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Search</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Add top margin to move the content down */
+    #content {
+        margin-top: 100px; /* Adjust this value to control the distance moved downward */
     }
-  </script>
-</body>
-</html>
+    /* Increase the distance between the button and the footer */
+    .btn-primary {
+        margin-bottom: 50px; /* Adjust this value to control the distance between the button and the footer */
+    }
+  </style>
+</head>
+
+<body>
+<header class="header">
+<div id="overview" class="container">
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand logo"><b>Rare<i>Insight</i></b></a>
+    </div>
+    <div id="main-nav" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active" id="firstLink"><a href="epidermolysis-bullosa.html" class="scroll-link">Overview</a></li>
+        <li><a href="#articles" class="scroll-link">Articles</a></li>
+        <li><a href="#team" class="scroll-link">Hospitals & Specialists</a></li>
+        <li><a href="#groups" class="scroll-link">Patient Groups & Foundations</a></li>
+        <li><a href="index.html" class="scroll-link">Back to Home</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</header>
+<section id="content">
+<div class="container">
+  <div class="row">
+    <h1>Rare Disease Search</h1>
+
+    <div class="search-container">
+      <label for="meds">Enter medications:</label><br>
+      <input type="text" id="meds" placeholder="e.g., med1, med2, aspirin">
+      <button onclick="searchDiseases()">Search</button>
+    </div>
+  
+    <h2 style="margin: 20px;">Matching Diseases:</h2>
+    <ul id="results"></ul>
+  
+    <script>
+      async function searchDiseases() {
+        const medsInput = document.getElementById('meds').value;
+        const medications = medsInput.split(',').map(med => med.trim());
+  
+        const response = await fetch('http://localhost:3000/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ medications })
+        });
+  
+        const data = await response.json();
+        const resultsList = document.getElementById('results');
+        resultsList.innerHTML = '';
+  
+        if (data.diseases.length === 0) {
+          resultsList.innerHTML = '<li>No matching diseases found.</li>';
+        } else {
+          data.diseases.forEach(disease => {
+            const li = document.createElement('li');
+            li.textContent = disease;
+            resultsList.appendChild(li);
+          });
+        }
+      }
+</script>      
+</div>
+</section>
+
+<footer>
+<div class="container text-center">
+  <p>&copy; 2024 RareInsight. All rights reserved.</p>
+</div>
+</footer>

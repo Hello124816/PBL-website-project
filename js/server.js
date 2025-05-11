@@ -27,7 +27,23 @@ connection.connect(error =>{
         
 })
 app.post('/search', (req, res) => {
-  
+ const {medications} = req.body
+ const query = "SELECT * FROM diseases"
+ connection.query(query, (error, results) => {
+  if(error){
+    console.log("Error")
+  }
+
+  const matchedDiseases = results.filter(disease => {
+        if (!disease.Medications) {
+          return false;
+        }
+
+        const meds = disease.Medications.split(',').map(m => m.trim().toLowerCase());
+        return meds.some(med => medications.map(m => m.toLowerCase()).includes(med));
+      }).map(disease => disease.Name);
+      res.json({ diseases: matchedDiseases });
+  });
 });
 // Start server
 app.listen(port, () => {
