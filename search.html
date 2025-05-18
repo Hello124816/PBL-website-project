@@ -32,10 +32,7 @@
     </div>
     <div id="main-nav" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active" id="firstLink"><a href="epidermolysis-bullosa.html" class="scroll-link">Overview</a></li>
-        <li><a href="#articles" class="scroll-link">Articles</a></li>
-        <li><a href="#team" class="scroll-link">Hospitals & Specialists</a></li>
-        <li><a href="#groups" class="scroll-link">Patient Groups & Foundations</a></li>
+        <li class="active" id="firstLink"><a href="search.html" class="scroll-link">Overview</a></li>
         <li><a href="index.html" class="scroll-link">Back to Home</a></li>
       </ul>
     </div>
@@ -46,7 +43,7 @@
 <div class="container">
   <div class="row">
     <h1>Rare Disease Search</h1>
-
+    <p>You can provide  your medical history and we can recommand which rare disease research you should read more into</p>
     <div class="search-container">
       <label for="meds">Enter medications:</label><br>
       <input type="text" id="meds" placeholder="e.g., med1, med2, aspirin">
@@ -61,7 +58,7 @@
         const medsInput = document.getElementById('meds').value;
         const medications = medsInput.split(',').map(med => med.trim());
   
-        const response = await fetch('http://localhost:3000/search', {
+        const response = await fetch('https://rareinsight-backend.onrender.com/search', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ medications })
@@ -76,13 +73,31 @@
         } else {
           data.diseases.forEach(disease => {
             const li = document.createElement('li');
-            li.textContent = disease;
+            const link = document.createElement('a');
+            link.textContent = "Link to more research";
+            if (disease == "Epidermolysis Bullosa") {
+              link.href = "epidermolysis-bullosa.html";
+            } else if (disease == "Bullous Pemphigoid") {
+              link.href = "bullous-pemphigoid.html";
+            } else if (disease == "Pulmonary Hypertension") {
+              link.href = "pulmonary-hypertension.html";
+            } else {
+              link.href = "prader-willi-syndrome.html";
+            }
+              
+            li.textContent = disease + " ";
+            li.appendChild(link);
             resultsList.appendChild(li);
           });
         }
       }
 </script>      
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 </section>
 
 <footer>
