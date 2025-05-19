@@ -1,0 +1,29 @@
+
+/*
+Author URI: http://webthemez.com/
+*/
+
+/**/
+/**/
+font-family: "Times New Roman", Times, serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Times New Roman", Times, serif;
+}
+body {
+	height: 100%;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	background: #fff;
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+}
+...
