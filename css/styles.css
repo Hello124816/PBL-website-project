@@ -420,6 +420,10 @@ margin-top: 101px;
 	padding:30px 0;
 	text-align:center;	
 }
+.hero-text2 h2{
+	font-size: 45px;
+	text-align: center;
+}
 .hero-text2 h3{
 font-size: 21px;
 color: #0680BE;
@@ -925,7 +929,7 @@ hr {
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background: #DCE8EC;
+	background: #8edaf4;
 }
 #navigation {
 	position: fixed;
@@ -1229,4 +1233,87 @@ background: rgba(0, 120, 186, 0.65);
 }
 #content input{
 	width: 15%;
+}
+
+.b1.disease-box {
+    border-radius: 20px;
+    box-shadow: 0 4px 24px 0 rgba(74, 47, 90, 0.10), 0 2px 4px 0 rgba(44, 43, 94, 0.08);
+    transition: box-shadow 0.3s;
+    background: #fff;
+}
+.b1.disease-box:hover {
+    box-shadow: 0 8px 32px 0 rgba(144, 62, 137, 0.2), 0 4px 8px 0 rgba(44, 43, 94, 0.14);
+}
+.col-md-12 h2{
+	font-size: 45px;
+	text-align: left;
+}
+.container hero-text2 h3{
+	font-size: 28px;
+	text-align: center;
+}
+.col-md-4 h4{
+	font-size: 22px;
+	text-align: left;
+}
+.col-md-4 p{
+	font-size: 14px;
+	text-align: left;
+}
+#aboutUs .row.feature:nth-child(3) .feature-media img {
+    margin-top: 18px;
+}
+/* 第二個 .row.feature 的圖片往下移（Bullous Pemphigoid） */
+#aboutUs .row.feature:nth-child(4) .feature-media img {
+    margin-top: 30px;
+}
+#aboutUs .row.feature:nth-child(5) .feature-media img {
+    margin-top: 30px;
+}
+#aboutUs .row.feature {
+	position: relative;
+	margin-bottom: 54px;
+  }
+  
+  /* 每個區塊的上方都畫分隔線 */
+  #aboutUs .row.feature::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -55px;    /* 間距的一半，讓線正好在兩區塊中間 */
+	height: 0;
+	border-top: 1px solid #ccc;
+	z-index: 1;
+  }
+  
+  /* 第一個區塊特例，線緊貼最上面 */
+  #aboutUs .row.feature:first-child::before {
+	top: 0;
+  }
+  
+  /* 最後一個區塊底下不要有多餘間距 */
+  #aboutUs .row.feature:last-child {
+	margin-bottom: 0;
+  }
+  
+  body {
+    background: #d7f4ff !important;
+}
+
+body.lang-zh #aboutUs .row.feature:nth-child(2) .feature-media img {
+    margin-top: -28px;
+}
+
+body.lang-zh #aboutUs .row.feature:nth-child(3) .feature-media img {
+    margin-top: -25px;
+}
+
+body.lang-zh #aboutUs .row.feature:nth-child(4) .feature-media img {
+    margin-top: -18px;
+}
+
+body.lang-zh #aboutUs .row.feature:nth-child(5) .feature-media img {
+    margin-top: -24px;
 }

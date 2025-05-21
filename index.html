@@ -12,9 +12,9 @@
 <!--[if lt IE 9]> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-<title>Medplus a medical bootstrap web template</title>
-<meta name="description" content="">
-<meta name="author" content="WebThemez">
+<title>RareInsight 罕見疾病資訊平台</title>
+<meta name="description" content="RareInsight 罕見疾病資訊平台">
+<meta name="author" content="Jonathan 黃子洋">
 <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -49,6 +49,7 @@
           <li><a href="#plans" class="scroll-link">Forum</a></li>
           <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
           <li><a href="search.html" class="scroll-link">Medical History Look-Up</a></li>
+          <li><a href="translation.html" class="scroll-link">中/En</a></li>
         </ul>
       </div>
       <!--/.navbar-collapse--> 
@@ -77,69 +78,140 @@
 	<!-- end slider -->
   </div>
   <div class="container hero-text2">
+  <br/><br/>
   <h2>Our Mission</h2>
+  <br/>
   <h3>This website aims to build a centralized platform that can bridge information gaps and facilitate communications among interested parties, support collaboration, and improve access to critical resources for the rare disease community.</h3>
+  <br/>
   <h3>A rare disease is a condition characterized by very low prevalence, with definitions varying by region. In the United States, it refers to a disease affecting fewer than 200,000 people, as outlined in the Orphan Drug Act of 1983. In Taiwan, a rare disease is defined as one that affects fewer than 1 in 10,000 individuals, according to the Rare Disease and Orphan Drug Act of 2000. Despite differences in thresholds, both definitions highlight the need for specialized attention, as these conditions pose significant challenges in diagnosis, treatment, and research due to their rarity.</h3>
-  </div>
+  <br/><br/><br/>
+</div>
 </section>
+
+<style>
+  /* 16:9 響應式影片容器 */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
 <section id="aboutUs">
   <div class="container">
     <div class="heading text-center"> 
       <!-- Heading -->
+      <br/>
       <h2>Rare Diseases</h2>
       <p>These are the rare diseases that we will have information on.</p>
+      <br/><br/>
     </div>
+
+    <!-- EB -->
     <div class="row feature design">
       <div class="area1 columns right">
-        <h3>Epidermolysis Bullosa 表皮分解性水泡症</h3>
-        <p><ul>
+        <h3>Epidermolysis Bullosa</h3>
+        <br/>
+        <ul>
           <li><b>Epidermolysis Bullosa (EB)</b> is a rare genetic disorder causing fragile skin that blisters and tears with minimal friction, due to gene mutations affecting skin integrity.</li>
           <li><b>Symptoms</b> include blistering, open wounds, pain, and scarring; severe cases may impact internal linings like the mouth and esophagus, leading to complications such as infections, malnutrition, and increased skin cancer risk.</li>
           <li><b>Affected Population:</b> EB affects about 20 per million live births globally, impacting all races and genders without specific geographic concentration.</li>
           <li><b>Treatment</b> focuses on symptom management, wound care, and pain relief, with advanced therapies like gene therapy available but often costly.</li>
-    </ul></p>
+        </ul>
       </div>
-      <div class="area2 columns feature-media left"> <img src="images/epidermolysis-bullosa.jpg" alt="" width="100%"> </div>
+      <div class="area2 columns feature-media left">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/S_Oo6FaPf-8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
-	  <div class="row feature design">
+
+    <!-- Bullous Pemphigoid -->
+    <div class="row feature design">
       <div class="area1 columns right">
-        <h3>Bullous Pemphigoid 大疱性類天疱瘡</h3>
-        <p><ul>
+        <h3>Bullous Pemphigoid</h3>
+        <br/>
+        <ul>
           <li><b>Bullous Pemphigoid</b> is a rare autoimmune skin disorder causing large, fluid-filled blisters, mainly on flexing areas like the abdomen, thighs, or armpits, due to the immune system attacking tissue between skin layers.</li>
           <li><b>Symptoms</b> Include red, itchy rashes that develop into painful blisters filled with clear or yellow fluid, which may rupture and cause sores.</li>
           <li><b>Affected Population:</b> Primarily affects older adults over 60, occurring equally among men and women, with a higher prevalence in Western populations.</li>
           <li><b>Treatment</b> focuses on reducing inflammation, relieving itching, and preventing blisters, using corticosteroids, immunosuppressants, and anti-inflammatory medications; early treatment can aid in achieving long-term remission and preventing complications.</li>
-    </ul></p>
+        </ul>
       </div>
-      <div class="area2 columns feature-media left"> <img src="images/Bullous-Pemphigoid.jpg" alt="" width="100%"> </div>
+      <div class="area2 columns feature-media left">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/0Bo0oI7p_Ro"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
+
+    <!-- Pulmonary Hypertension -->
     <div class="row feature design">
       <div class="area1 columns right">
-        <h3>Pulmonary Hypertension 肺高血壓</h3>
-        <p><ul>
+        <h3>Pulmonary Hypertension</h3>
+        <br/>
+        <ul>
           <li><b>Pulmonary Hypertension (PH)</b> A condition where high blood pressure in the pulmonary arteries forces the heart to work harder to push blood to the lungs, potentially leading to heart failure over time.</li>
           <li><b>Symptoms</b> Includes shortness of breath, fatigue, chest pain, dizziness, leg and ankle swelling, and bluish lips or skin. These symptoms worsen gradually, greatly affecting quality of life.</li>
-          <li><b>Affected Population:</b>  PH can impact individuals of any age, including children, but is most frequently diagnosed in adults. It has a global presence with no specific geographic concentration; prevalence depends on underlying causes and healthcare access.</li>
+          <li><b>Affected Population:</b> PH can impact individuals of any age, including children, but is most frequently diagnosed in adults. It has a global presence with no specific geographic concentration; prevalence depends on underlying causes and healthcare access.</li>
           <li><b>Treatment</b> Focuses on managing symptoms and enhancing quality of life through medications (vasodilators, blood thinners, diuretics), oxygen therapy, lifestyle adjustments, and, in severe cases, lung transplantation. Early diagnosis and management are essential for improving outcomes.</li>
-    </ul></p>
+        </ul>
       </div>
-      <div class="area2 columns feature-media left"> <img src="images/Pulmonary-Hypertension.jpg" alt="" width="100%"> </div>
+      <div class="area2 columns feature-media left">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/IDlizNdfETQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
+
+    <!-- Prader-Willi Syndrome -->
     <div class="row feature design">
       <div class="area1 columns right">
-        <h3>Prader-Willi Syndrome 普瑞德威利症候群</h3>
-        <p><ul>
+        <h3>Prader-Willi Syndrome</h3>
+        <br/>
+        <ul>
           <li><b>Prader-Willi Syndrome (PWS)</b> A genetic disorder caused by the loss of function of specific genes on chromosome 15, typically arising from a spontaneous genetic error rather than inheritance.</li>
           <li><b>Symptoms</b> Initially presents with poor muscle tone, feeding difficulties, and growth delays in infancy, followed by hyperphagia (insatiable appetite), leading to obesity in childhood. Additional symptoms include intellectual disabilities, behavioral issues, short stature, low muscle tone, and distinctive facial features, with risks of sleep disturbances, hormonal deficiencies, and obesity-related complications.</li>
-          <li><b>Affected Population:</b>  PWS affects males and females equally across all ethnic groups, with a prevalence of 1 in 10,000 to 30,000 individuals worldwide.</li>
+          <li><b>Affected Population:</b> PWS affects males and females equally across all ethnic groups, with a prevalence of 1 in 10,000 to 30,000 individuals worldwide.</li>
           <li><b>Treatment</b> Aims to manage symptoms and improve quality of life through hormone therapy, strict dietary control, behavioral and physical therapy, and addressing obesity-related complications for better health outcomes.</li>
-    </ul></p>
+        </ul>
       </div>
-      <div class="area2 columns feature-media left"> <img src="images/Prader-Willi Syndrome.jpg" alt="" width="100%"> </div>
+      <div class="area2 columns feature-media left">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/1FRSSQco_pk"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
+
   </div>
-	
 </section>
 
 <section id="services" class="page-section colord">
@@ -153,6 +225,7 @@
               <div class="b1 disease-box">
                   <i class="circle"><img src="images/a1.jpg" alt="" /></i>
                   <h3>Epidermolysis Bullosa</h3>
+                  <br/>
                   <a href="epidermolysis-bullosa.html">
                       <button class="btn btn-primary learn-more-btn">Learn More</button>
                   </a>
@@ -164,6 +237,7 @@
               <div class="b1 disease-box">
                   <i class="circle"> <img src="images/a2.jpg" alt="" /></i>
                   <h3>Bullous<br>Pemphigoid</h3>
+                  <br/>
                   <a href="bullous-pemphigoid.html">
                       <button class="btn btn-primary learn-more-btn">Learn More</button>
                   </a>
@@ -175,6 +249,7 @@
               <div class="b1 disease-box">
                   <i class="circle"> <img src="images/a3.jpg" alt="" /></i>
                   <h3>Pulmonary Hypertension</h3>
+                  <br/>
                   <a href="pulmonary-hypertension.html">
                       <button class="btn btn-primary learn-more-btn">Learn More</button>
                   </a>
@@ -186,6 +261,7 @@
               <div class="b1 disease-box">
                   <i class="circle"> <img src="images/a4.jpg" alt="" /></i>
                   <h3>Prader-Willi Syndrome</h3>
+                  <br/>
                   <a href="prader-willi-syndrome.html">
                       <button class="btn btn-primary learn-more-btn">Learn More</button>
                   </a>
@@ -206,10 +282,13 @@
     <div class="container"> 
       <div class="row">
         <div class="col-md-12">
+          <br/>
           <h2>Partner Companies</h2>
+          <br/>
           <div class="customNavigation"> <a class="prev"><i class="fa fa-chevron-circle-left"></i></a> <a class="next"><i class="fa fa-chevron-circle-right"></i></a> </div>
           <div id="owl-demo" class="owl-carousel">
             <div class="item"> <span class="helper"> <a href="https://www.twibiotech.com/website/index?lang=en"> <img src="images/clients/twib-removebg-preview.jpg" alt="client" /> </a> </span> </div>
+            <br/>
           </div>
         </div>
       </div>
@@ -225,12 +304,16 @@
     </div>
 	  <div class="row feature design">
       <h3>EB Awareness Week 2024 Global Campaign</h3>
+      <br/>
       <p><b>10/25/2024: </b>EB Awareness Week 2024 is an international campaign to raise awareness of epidermolysis bullosa (EB). The campaign will take place from October 25–31, 2024, with EB Awareness Day on October 25</p>
+      <br/>
       <a href="https://www.debra-international.org/">Link to the event</a>
     </div>
     <div class="row feature design">
       <h3>TWi-B on AC203</h3>
+      <br/>
       <p><b>9/9/2024: </b>The company has developed a new drug, AC-203, for the treatment of Epidermolysis Bullosa Simplex (EBS), and has received approval from the Ireland to conduct Phase 2/3 clinical trials.</p>
+      <br/>
       <a href="https://www.twibiotech.com/website/news_detail/147?lang=en">Link to the article</a>
     </div>
   </div>
